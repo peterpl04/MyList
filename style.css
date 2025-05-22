@@ -1,0 +1,115 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #9084bc, #9084bc);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #000;
+  }
+  
+  
+  header {
+    background-color: #d9d9d9;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    background-color: #f2f2f5;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+  }
+  
+  .user-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #000;
+  }
+  
+  footer {
+    background-color: #d9d9d9;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer-logo {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons span {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .botao-bonito {
+    background-color: #000000; /* verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .botao-bonito:hover {
+    background-color: #9084bc;
+    transform: translateY(-2px);
+  }
+  
+  .botao-bonito:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .texto-cadastro a {
+    color: #5c4b99;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12.5px;
+  }
+  
+  .texto-cadastro a:h
+  over {
+    text-decoration: underline;
+  }
+  
