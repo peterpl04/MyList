@@ -20,8 +20,8 @@
     <div class="login-container">
       <h1>Login</h1>
       <div class="emoji-icon">👤</div>
-      <input type="text" placeholder="Usuário">
-      <input type="password" placeholder="Senha">
+      <input type="text" placeholder="Email" autocomplete="off" />
+      <input type="password" placeholder="Senha" autocomplete="new-password" />
       <p class="texto-cadastro">Não tem conta? <a href="/pages/cadastro/cadastro.html">Cadastre-se</a></p>
       <button id="login-btn" class="botao-bonito">
         <span id="login-texto">Login</span>
@@ -38,6 +38,16 @@
       <span>💼</span>
     </div>
   </footer>
+
+  <div id="modal-login-erro" class="modal fade">
+    <div class="modal-content animated">
+      <h3>⚠️ Erro ao fazer login</h3>
+      <p>Email ou senha incorretos.</p>
+      <div class="modal-botoes">
+        <button id="btn-fechar-login-erro" class="botao-bonito">OK</button>
+      </div>
+    </div>
+  </div>
   <script src="index.js"></script>
 
 </body>

@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  const saudacao = document.getElementById('saudacao');
+  const nomeCompleto = localStorage.getItem('nomeUsuario');
+
+  if (nomeCompleto) {
+    const primeiroNome = nomeCompleto.split(' ')[0];
+    saudacao.textContent = `Olá, ${primeiroNome}! 👋`;
+  }
+
   const taskInput = document.getElementById('task-input');
   const addTaskBtn = document.getElementById('add-task');
   const taskList = document.getElementById('task-list');

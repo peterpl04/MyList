@@ -16,6 +16,7 @@
 
   <main>
     <div class="container">
+      <div id="saudacao" class="saudacao"></div>
       <div class="task-form">
         <input type="text" id="task-input" placeholder="Digite uma nova tarefa..." />
         <textarea id="task-desc" placeholder="Descrição..." style="display: none;"></textarea>
@@ -52,7 +53,7 @@
 
 
   <div id="modal-descricao" class="modal fade">
-    <div class="modal-content animated">
+    <div class="modal-content form-modal animated">
       <h3>Adicionar descrição</h3>
       <textarea id="descricao-modal" placeholder="Digite a descrição..."></textarea>
       <div class="modal-botoes">
@@ -62,8 +63,9 @@
     </div>
   </div>
 
+
   <div id="modal-editar" class="modal fade">
-    <div class="modal-content animated">
+    <div class="modal-content form-modal animated">
       <span id="fechar-edicao" class="fechar">&times;</span>
       <h3>Editar Tarefa</h3>
       <input id="editar-titulo" type="text" placeholder="Título da tarefa" />
@@ -75,7 +77,7 @@
   </div>
 
   <div id="visualizar-descricao-modal" class="modal fade">
-    <div class="modal-content animated">
+    <div class="modal-content form-modal animated">
       <span id="fechar-descricao" class="fechar">&times;</span>
       <h3>Descrição da Tarefa</h3>
       <p id="descricao-conteudo"></p>
