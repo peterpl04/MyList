@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minhas Tarefas - MyList</title>
+  <link rel="stylesheet" href="../../assets/global.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Minhas Tarefas</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="task-form">
+        <input type="text" id="task-input" placeholder="Digite uma nova tarefa..." />
+        <textarea id="task-desc" placeholder="Descrição..." style="display: none;"></textarea>
+
+        <button id="add-task" class="botao-bonito">Adicionar</button>
+      </div>
+
+      <div id="filtro-container" class="filtros">
+        <button data-filtro="todas" class="botao-bonito">Todas</button>
+        <button data-filtro="ativas" class="botao-bonito">Ativas</button>
+        <button data-filtro="concluidas" class="botao-bonito">Concluídas</button>
+      </div>
+
+
+
+      <ul id="task-list" class="task-list"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logo">MyList</div>
+  </footer>
+
+
+  <div id="modal-decisao" class="modal fade">
+    <div class="modal-content animated">
+      <h3>Deseja adicionar com descrição?</h3>
+      <div class="modal-botoes">
+        <button id="decisao-sim" class="botao-bonito">Sim</button>
+        <button id="decisao-nao" class="botao-bonito">Não</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="modal-descricao" class="modal fade">
+    <div class="modal-content animated">
+      <h3>Adicionar descrição</h3>
+      <textarea id="descricao-modal" placeholder="Digite a descrição..."></textarea>
+      <div class="modal-botoes">
+        <button id="confirmar-desc" class="botao-bonito">Confirmar</button>
+        <button id="cancelar-desc" class="botao-bonito">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-editar" class="modal fade">
+    <div class="modal-content animated">
+      <span id="fechar-edicao" class="fechar">&times;</span>
+      <h3>Editar Tarefa</h3>
+      <input id="editar-titulo" type="text" placeholder="Título da tarefa" />
+      <textarea id="editar-descricao" placeholder="Descrição da tarefa..."></textarea>
+      <div class="modal-botoes">
+        <button id="salvar-edicao" class="botao-bonito">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="visualizar-descricao-modal" class="modal fade">
+    <div class="modal-content animated">
+      <span id="fechar-descricao" class="fechar">&times;</span>
+      <h3>Descrição da Tarefa</h3>
+      <p id="descricao-conteudo"></p>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

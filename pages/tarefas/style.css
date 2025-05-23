@@ -1,0 +1,295 @@
+.container {
+  background-color: #f2f2f5;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-list li:hover {
+  background-color: #eee;
+}
+
+.task-list li span {
+  flex: 1;
+  outline: none;
+  font-size: 15px;
+}
+
+.task-list input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.task-list button {
+  background: none;
+  border: none;
+  color: #5c4b99;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.filtro-ativo {
+  outline: 2px solid rgb(184, 12, 12);
+}
+
+.tarefa-concluida {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+
+  to {
+    opacity: 0;
+    height: 0;
+    margin-bottom: 0;
+  }
+}
+
+.task-list li {
+  animation: fadeInSlide 0.8s ease forwards;
+  transition: background-color 1.2s ease, opacity 0.3s ease;
+}
+
+.tarefa-concluida {
+  text-decoration: line-through;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  margin-top: 10px;
+  resize: none;
+}
+
+.opcoes-adicao {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.icon-descricao {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.fechar {
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+#descricao-modal {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  margin: 15px 0;
+  resize: none;
+  min-height: 80px;
+}
+
+.modal-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: scaleIn 0.3s ease;
+}
+
+textarea#descricao-modal {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  margin: 15px 0;
+  resize: none;
+  min-height: 80px;
+}
+
+.modal-botoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.fechar {
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#descricao-conteudo {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1
+  }
+}
+
+#editar-titulo {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.task-list span {
+  cursor: default;
+}
+
+.task-list input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #5c4b99;
+  /* cor personalizada */
+  cursor: pointer;
+  margin-right: 8px;
+  transform: translateY(2px);
+}
