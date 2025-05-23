@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minhas Tarefas - MyList</title>
+  <link rel="stylesheet" href="tarefas.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Minhas Tarefas</h1>
+  </header>
+
+  <main>
+    <div class="task-container">
+      <h2>Adicione uma nova tarefa</h2>
+      <input class="task-input" type="text" placeholder="Digite sua tarefa..." />
+      <button class="botao-bonito" onclick="adicionarTarefa()">Adicionar</button>
+      <ul class="task-list" id="lista-tarefas"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logo">MyList</div>
+    <div class="social-icons">
+      <span>🐦</span>
+      <span>📘</span>
+      <span>💼</span>
+    </div>
+  </footer>
+
+  <script>
+    function adicionarTarefa() {
+      const input = document.querySelector('.task-input');
+      const valor = input.value.trim();
+      if (valor === '') return;
+
+      const lista = document.getElementById('lista-tarefas');
+
+      const li = document.createElement('li');
+      li.className = 'task-item';
+      li.innerHTML = `
+        <span>${valor}</span>
+        <div class="task-buttons">
+          <button class="done" onclick="concluirTarefa(this)">✔</button>
+          <button class="remove" onclick="removerTarefa(this)">🗑</button>
+        </div>
+      `;
+
+      lista.appendChild(li);
+      input.value = '';
+    }
+
+    function concluirTarefa(botao) {
+      botao.closest('li').style.textDecoration = 'line-through';
+    }
+
+    function removerTarefa(botao) {
+      botao.closest('li').remove();
+    }
+  </script>
+</body>
+
+</html>
