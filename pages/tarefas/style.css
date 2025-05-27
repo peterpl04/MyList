@@ -15,6 +15,7 @@
 
 .task-form input {
   flex: 1;
+  margin-top: 3px;
   padding: 10px;
   border: 1px solid #aaa;
   border-radius: 6px;
@@ -137,11 +138,16 @@ textarea {
 }
 
 #descricao-conteudo {
+  max-height: 400px;
+  overflow-y: auto;
   word-break: break-word;
   white-space: pre-wrap;
   font-size: 15px;
-  color: #333;
+  color: #ffffff;
   margin-top: 10px;
+  text-align: left;
+  padding-right: 5px;
+  font-weight: bold;
 }
 
 @keyframes fadeIn {
