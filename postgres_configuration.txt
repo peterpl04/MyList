@@ -1,0 +1,22 @@
+create table usuario (
+	id serial primary key,
+	nome varchar(55) NOT NULL,
+	senha varchar(30) NOT NULL,
+	email varchar(55) NOT NULL UNIQUE
+	)
+
+	
+create table lista
+(
+	id serial primary key,
+	email varchar(55) NOT NULL,
+	titulo varchar(55) NOT NULL,
+	descricao TEXT,
+	status boolean,
+	constraint fk_email foreign key (email) references usuario (email)
+)
+
+Delete * from lista WHERE email=joao@email.com and Where id=1;
+
+select * from usuario;
+Select * from lista;
