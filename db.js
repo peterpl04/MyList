@@ -4,7 +4,7 @@ const { Pool } = require("pg");
 const pool = new Pool({
   user: "postgres",
   host: "localhost",
-  database: "mylist",
+  database: "postgres",
   schema:"public", // "schema" é uma boa adição, mas geralmente não causa erro de autenticação.
   password: "admin",
   port: 5432,

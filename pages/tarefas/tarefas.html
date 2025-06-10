@@ -40,6 +40,16 @@
     <div class="footer-logo">MyList</div>
   </footer>
 
+  <div id="modal-prioridade" class="modal">
+    <div class="modal-content animated">
+      <h3>Qual é o nível de prioridade desta tarefa?</h3>
+      <div class="modal-botoes">
+        <button class="botao-bonito" data-prioridade="Alta">Alta 🔴</button>
+        <button class="botao-bonito" data-prioridade="Média">Média 🟡</button>
+        <button class="botao-bonito" data-prioridade="Baixa">Baixa 🟢</button>
+      </div>
+    </div>
+  </div>
 
   <div id="modal-decisao" class="modal fade">
     <div class="modal-content animated">
@@ -69,6 +79,14 @@
       <span id="fechar-edicao" class="fechar">&times;</span>
       <h3 style="text-align: center;">Editar Tarefa</h3>
       <input id="editar-titulo" type="text" placeholder="Título da tarefa" />
+      <div class="grupo-prioridade-editar">
+        <label>Prioridade:</label>
+        <div class="botoes-prioridade-editar">
+          <button type="button" class="botao-bonito-prioridade prioridade-btn-editar" data-prioridade="Alta">🔴 Alta</button>
+          <button type="button" class="botao-bonito-prioridade prioridade-btn-editar" data-prioridade="Média">🟡 Média</button>
+          <button type="button" class="botao-bonito-prioridade prioridade-btn-editar" data-prioridade="Baixa">🟢 Baixa</button>
+        </div>
+      </div>
       <textarea id="editar-descricao" placeholder="Descrição da tarefa..."></textarea>
       <div class="modal-botoes">
         <button id="salvar-edicao" class="botao-bonito">Salvar</button>
